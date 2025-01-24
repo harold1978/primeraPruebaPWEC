@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.summary {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.add-student {
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-student input {
+    padding: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+    border-radius: 5px;
+    
+}
+
+.add-student button {
+    padding: 5px 20px;
+    font-size: 16px;
+    
+    background-color: #007BFF;
+}
+
+.add-student button:hover {
+    background-color: #0056b3;
+}
+.primero{
+    display: flex;
+    
+    justify-content:space-between;
+    font-weight: bold;
+    color: #007BFF;
+
+  
+}
+.segundo{
+  display:flex;
+  flex-direction: column;
+
+    font-style: italic;
+    color:black;
+    
+}
