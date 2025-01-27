@@ -83,7 +83,7 @@ button:hover {
 .primero{
     display: flex;
     
-    justify-content:space-between;
+    justify-content:space-around;
     font-weight: bold;
     color: #007BFF;
 

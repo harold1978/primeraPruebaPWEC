@@ -12,6 +12,7 @@ function guardaEstudiante() {
 }
 function guardaAsistencia(){
     localStorage.setItem('asistencia',JSON.stringify(asistencia));
+    showSummary();
 }
 
 // Función para agregar un nuevo estudiante
@@ -126,7 +127,7 @@ function renderStudentList() {
         dateCell.textContent = fechaactual;//date || "No registrada"; // Si no se ha marcado la estudiantes, mostramos "No registrada"
     
         const actionCell = document.createElement('td');
-        actionCell.innerHTML = `<button onclick="eliminaAsistencia('${student.id}')">Eliminar</button>`;
+        actionCell.innerHTML = `<button onclick="eliminaAsistencia('${student.id}')">Eliminar Asistencia</button>`;
     
         // Añadir las celdas a la fila
         row.appendChild(studentCell);
@@ -140,6 +141,20 @@ function renderStudentList() {
 
     });
 
+}
+
+function eliminaAsistencia(id){
+    const fecha = prompt("Escribe la fecha o escribe 0 para eliminar toda la asistencia de: "+id);
+    if(fecha=="" || fecha==null ){return;}
+    if(fecha!=="0" ){
+        asistencia = asistencia.filter(asist=>asist.fecha!==fecha && asist.id!==id);
+    }else{
+        const r = prompt("Desea eliminar todas las asistencia de: (S/N) "+id);
+        if(r=="S"){
+            asistencia = asistencia.filter(asist=>asist.id!==id);
+        }
+    }
+    guardaAsistencia();
 }
 
 // Si hay datos en el almacenamiento local, los mostramos al cargar la página
